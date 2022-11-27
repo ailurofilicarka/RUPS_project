@@ -28,6 +28,7 @@ function App({navigation}) {
         <Stack.Screen name="HomeStack" component={MainTabScreen} options= {{
           title: "Mestni prevoz",
           color: "#002171",
+          
           headerRight: () => (
             <Button
               title="Details"
