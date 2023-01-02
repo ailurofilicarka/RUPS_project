@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './HomeScreen';
 import TicketsScreen from './TicketsScreen';
@@ -33,7 +34,7 @@ const MainTabScreen = () => (
             options={{
                 tabBarLabel: 'Buy ticket',
                 tabBarIcon: ({color}) => (
-                    <MaterialCommunityIcons name="home" color={color} size={26}/>
+                    <Entypo name="ticket" color={color} size={26}/>
                 ),
             }}
         />
@@ -53,7 +54,7 @@ const MainTabScreen = () => (
             options={{
                 tabBarLabel: 'Map',
                 tabBarIcon: ({color}) => (
-                    <MaterialCommunityIcons name="home" color={color} size={26}/>
+                    <MaterialCommunityIcons name="map" color={color} size={26}/>
                 ),
             }}
         />    
@@ -63,7 +64,7 @@ const MainTabScreen = () => (
             options={{
                 tabBarLabel: 'Details',
                 tabBarIcon: ({color}) => (
-                    <MaterialCommunityIcons name="home" color={color} size={26}/>
+                    <Ionicons name="document-text-outline" color={color} size={23}/>
                 ),
             }}
         />
@@ -92,22 +93,4 @@ const HomeStackScreen = ({navigation}) => (
 </HomeStack.Navigator>
 );
 
-// const TicketsStackScreen = ({navigation}) => (
-// <TicketsStack.Navigator screenOptions={{
-//         // headerStyle: {
-//         //     backgroundColor: '#1f65ff',
-//         // },
-//         // headerTintColor: '#fff',
-//         // headerTitleStyle: {
-//         //     fontWeight: 'bold'
-//         // }
-//     }}>
-//         <TicketsStack.Screen name="Tickets" component={TicketsScreen} options={{
-//         title: '',
-//         // headerLeft: () => (
-//         //     <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
-//         // )
-//         }} />
-// </TicketsStack.Navigator>
-// );
   
